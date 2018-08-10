@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>nodejs</title>
+    <script type="text/javascript">
+        var x = 1, y = 4;
+        alert("hello javaScript");
+        document.write("hello messi" + "<br/>");
+        document.write("(x+y)的结果为" + (x + y) + "<br/>");
+        for (var i = 1; i < 10; i++) {
+            document.write("i=" + i + "<br/>")
+        }
+
+        var arr = new Array()
+        arr[0] = 1
+        arr[1] = 2
+        arr[2] = 3
+        arr[3] = 4
+        arr[4] = 5
+
+        for (var i in arr) {
+            document.write("i=" + i + "<br/>")
+        }
+
+        function fun1() {
+            document.getElementById("txt").innerHTML = "用户名："
+            document.getElementById("userName").value = "messi"
+        }
+
+        function fun2() {
+            var para = document.createElement("p")
+            var node = document.createTextNode("money")
+            para.appendChild(node)
+            var parent = document.getElementById("parent")
+            var son1 = document.getElementById("son1")
+            parent.insertBefore(para, son1)
+        }
+
+        function fun3() {
+            var parent = document.getElementById("parent")
+            var son1 = document.getElementById("son1")
+            parent.removeChild(son1)
+        }
+
+        function fun4() {
+            document.getElementById("girl").style.color = "red"
+        }
+
+        var str = "1+2+3"
+        var num = 100
+        alert(eval(str))
+        document.write(parseInt(str))
+
+        window.alert("window function")
+        window.confirm("你是猪吗？")
+
+        function myFunction() {
+            var x;
+            var person = prompt("请输入你的名字", "Harry Potter");
+            if (person != null && person != "") {
+                x = "你好 " + person + "! 今天感觉如何?";
+                document.getElementById("demo").innerHTML = x;
+            }
+        }
+
+        // myFunction()
+
+        function fzt() {
+            alert("3秒后")
+        }
+
+        function setDateTime() {
+            var date = new Date()
+            var day = date.getDay();
+            var week;
+            switch (day) {
+                case 0:
+                    week = "星期天";
+                    break;
+                case 1:
+                    week = "星期一";
+                    break;
+                case 2:
+                    week = "星期二";
+                    break;
+                case 3:
+                    week = "星期三";
+                    break;
+                case 4:
+                    week = "星期四";
+                    break;
+                case 5:
+                    week = "星期五";
+                    break;
+                case 6:
+                    week = "星期六";
+                    break;
+                default:
+                    week = "扯淡"
+            }
+            var today = date.getFullYear() + "年" + (date.getMonth() + 1) + "月" + date.getDate() + "日" +
+                week + " " + date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
+            document.getElementById("today").innerHTML = today;
+        }
+
+        // window.setTimeout("fzt()", 3000)
+        window.setInterval("setDateTime()", 1000)
+        window.open("https://messi-q.github.io")
+
+    </script>
+</head>
+<body>
+
+<div id="today"></div>
+<div id="in">
+    <input type="text" id="demo" name="demoName">
+</div>
+
+<div id="parent">
+    <div id="son1">
+        <font id="txt">:</font><input type="text" id="userName" name="userName"><br/>
+    </div>
+</div>
+
+<p id="girl" style="">女孩</p>
+<input type="button" value="修改样式" onclick="fun4()"/>
+<input type="button" value="修改" onclick="fun1()"/>
+<input type="button" value="添加" onclick="fun2()"/>
+<input type="button" value="删除" onclick="fun3()"/>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<component name="libraryTable">
+  <library name="Gruntfile" type="javaScript">
+    <properties>
+      <sourceFilesUrls>
+        <item url="file://$PROJECT_DIR$/../jquery-cookie/Gruntfile.js" />
+        <item url="file://$PROJECT_DIR$/../jquery-cookie/bower.json" />
+        <item url="file://$PROJECT_DIR$/../jquery-cookie/component.json" />
+        <item url="file://$PROJECT_DIR$/../jquery-cookie/cookie.jquery.json" />
+        <item url="file://$PROJECT_DIR$/../jquery-cookie/package.json" />
+        <item url="file://$PROJECT_DIR$/../jquery-cookie/src/jquery.cookie.js" />
+        <item url="file://$PROJECT_DIR$/../jquery-cookie/test/tests.js" />
+      </sourceFilesUrls>
+    </properties>
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../jquery-cookie/Gruntfile.js" />
+      <root url="file://$PROJECT_DIR$/../jquery-cookie/bower.json" />
+      <root url="file://$PROJECT_DIR$/../jquery-cookie/component.json" />
+      <root url="file://$PROJECT_DIR$/../jquery-cookie/cookie.jquery.json" />
+      <root url="file://$PROJECT_DIR$/../jquery-cookie/package.json" />
+      <root url="file://$PROJECT_DIR$/../jquery-cookie/src/jquery.cookie.js" />
+      <root url="file://$PROJECT_DIR$/../jquery-cookie/test/tests.js" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

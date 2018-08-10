@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function say(name, age) {
+        alert(name + "今年" + age + "岁")
+    }
+
+    say("沾上干", 10)
+
+    var sayFunc = new Function("name", "age", "alert(name + '今年' + age + '岁')")
+    sayFunc("lisi", 13)
+
+    // 通过闭包访问私有局部变量a
+    // 闭包就是能够读取其它函数内部变量的函数,它可以使变量始终保存在内存中
+    function func() {
+        var a = 22
+        function func2() {
+            alert(++a)
+        }
+        return func2
+    }
+
+    var result = func()
+    result()
+
+</script>
+</body>
+</html>

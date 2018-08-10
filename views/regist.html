@@ -1,0 +1,18 @@
+<%- include header.html %>
+<form action="/do_regist" method="post" class="form-login" id="regist_form">
+    <div class="header">注册</div>
+    <div class="inputs">
+        <span style="padding:10px 15px;color:red;" id="error"><%=error%></span>
+        <input id="userName" name="userName" type="text" required="" placeholder="用户名">
+        <input id="userPwd" name="userPwd" type="password" required="" placeholder="密码">
+        <input id="userRepwd" name="userRepwd" type="password" required="" placeholder="密码确认">
+        <input id="userEmail" name="userEmail" type="text" required="" placeholder="邮箱">
+        <div class="link-2">
+            <a 	href="/login">已有帐号?</a>
+        </div>
+        <div class="clear">
+        </div>
+        <div class="button-login"><input type="submit" value="注 册" id="regist_btn"></div>
+    </div>
+</form>
+<%- include footer.html %>

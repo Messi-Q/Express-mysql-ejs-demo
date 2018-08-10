@@ -1,0 +1,45 @@
+<%- include header.html %>
+
+<div class="content">
+    <% for(var i = 0; i< data.length; i++){ %>
+    <div class="cell">
+        <div class="cell_author">
+            <img src="<%= data[i].fileImage %>" title="OMinds">
+            <a href="/>"><%= data[i].fileTitle %></a>
+            <span class="cell_loc" title="1楼"><%= data[i].fileId %>#</span>
+        </div>
+        <div class="cell_text" title=''>
+            <%= data[i].fileDescription %>
+        </div>
+        <div class="cell_bar">
+            <ul style="padding:0">
+                <li><a id="putgoods" name="putgoods" href="#" title="10个赞">赞[10]</a></li>
+                <li><a id="putbads" name="putbads" href="#" title="10个踩">踩[10]</a></li>
+            </ul>
+            <ul class="cell_bar_comm">
+                <li><a href="#" title="<%= data[i].fileReadPrice %>">阅读权价：</a><%= data[i].fileReadPrice %>&nbsp;</li>
+                <li><a href="#" title="<%= data[i].fileRightPrice %>">所有权价：</a><%= data[i].fileRightPrice %>&nbsp;</li>
+                <div class="bshare-custom" style="float:right;height:28px;margin-top: 4px;">
+                    <a title="分享到QQ空间" class="bshare-qzone"></a>
+                    <a title="分享到新浪微博" class="bshare-sinaminiblog"></a>
+                    <a title="分享到人人网" class="bshare-renren"></a>
+                    <a title="分享到腾讯微博" class="bshare-qqmb"></a>
+                    <a title="分享到网易微博" class="bshare-neteasemb"></a>
+                    <script type="text/javascript" charset="utf-8"
+                            src="http://static.bshare.cn/b/buttonLite.js#style=-1&uuid=;pophcol=2&lang=zh"></script>
+                    <script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script>
+                    <script type="text/javascript" charset="utf-8">
+                        bShare.addEntry({
+                            title: "OMinds分享",
+                            summary: '分享你的心事。',
+                            vTag: 'OMinds'
+                        });
+                    </script>
+                </div>
+            </ul>
+        </div>
+    </div>
+    <% } %>
+</div>
+
+<%- include footer.html %>

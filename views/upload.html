@@ -1,0 +1,63 @@
+<%- include header.html %>
+<div class="main">
+    <div class="upideas_content clear_fix">
+        <div class="up_content clear_fix">
+            <div class="up_bar">
+                <p>上传须知</p>
+                <ol style="padding:0;">
+                    <li>上传的资源文件要求不含政治、色情、广告、诽谤、歧视等内容。</li>
+                    <li>上传的资源文件可以选择全网可以和本网可见</li>
+                    <li>上传的资源文件可进行阅读权和所有权的交易</li>
+                    <li>上传的资源文件可以包括pdf、ppt、mp4、图片等</li>
+                </ol>
+            </div>
+            <div class="main">
+                <div class="fileupload">
+                    <h3 align="center">资源上传</h3>
+                    <form action="/file_upload" method="post" enctype="multipart/form-data">
+                        <table border="1px" cellspacing="0px" align="center" cellpadding="2px">
+                            <tr>
+                                <td class="c1">标题:</td>
+                                <td class="c2"><input type="text" class="input1" name="title" id="tiltle"/></td>
+                            </tr>
+                            <tr>
+                                <td class="c1">概要截图:</td>
+                                <td class="c2"><input type="file" class="input1" id="abstractPic" name="abstractPic"
+                                                      accept="image/jpeg,image/gif,image/jpg,image/png"/></td>
+                            </tr>
+                            <tr>
+                                <td class="c1">阅读权价格:</td>
+                                <td class="c2"><input type="text" class="input1" id="readPrice" name="readPrice"/></td>
+                            </tr>
+                            <tr>
+                                <td class="c1">所有权价格:</td>
+                                <td class="c2"><input type="text" class="input1" id="rightPrice" name="rightPrice"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="c1">选择文件:</td>
+                                <td class="c2"><input type="file" class="input1" id="selectFile" name="selectFile"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">资源描述：</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <textarea class="up_idea_text" id="fileDescription" name="fileDescription" rows="10"
+                                              required placeholder="资源描述">
+                                    </textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="c3" colspan="2" align="center"><input type="submit" value="上传资源"/></td>
+                            </tr>
+                        </table>
+                        <div class="span"><span class="up_idea_err"><%= error %></span></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<%- include footer.html %>
